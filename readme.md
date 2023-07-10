@@ -22,23 +22,23 @@ const data = await getList()
 使用命令行工具生成对应的axios 文件；
 
 ````js
-jce2req at ./TgTip.jce
+jce2req at ./Test.jce
 // 该命令行可以直接生成对应的TgTipRequest.js
 
 import httpRequest from '@/utils/request';     
-export function saveTip(data){
+export function saveTest(data){
     return httpReqeust({
-        url:'TgTip/saveTip',
+        url:'test/saveTest',
         method:'post',
         data
     })
 };
 
-jce2req at ./TgTip.jce -a /api
+jce2req at ./Test.jce -a /api
 // 该命令行可以生成url前缀为/api的路由请求
-export function saveTip(data){
+export function saveTest(data){
     return httpReqeust({
-        url:'/api/TgTip/saveTip',
+        url:'/api/Test/saveTest',
         method:'post',
         data
     })
