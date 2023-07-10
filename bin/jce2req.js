@@ -8,6 +8,7 @@ const program = require("commander")
 program.version("1.0.0")
     .command("at <JceFilePath>")
     .option("-a,--alias <char>", "request  alias")
+    .option("-m,--module <char>", "axios module alias")
     .description("compile jce to axios http request")
     .action(function (arg,opt) {
         if (!arg) {
@@ -19,7 +20,7 @@ program.version("1.0.0")
         const str = readFileSync(filePath,"utf-8")
         const { readInterFace, compileToAxios } = require("../src/utils/compile");
         const interFace = readInterFace(str)
-        interFace.httpModule = '@/utils/request'
+        interFace.httpModule = opt.module || '@/utils/request'
         interFace.alias = opt.alias || ""
         const fileContent =  compileToAxios(interFace);
         writeFileSync(jce2JsPath, fileContent)

@@ -4,6 +4,19 @@
 npm install jce-loader -g
 ````
 
+## sourceCode
+
+一个配置项，两个可选项
+
+jce2req at <JceFilePath> -a /api -m @/utils/request
+
+````js
+program.version("1.0.0")
+    .command("at <JceFilePath>")
+    .option("-a,--alias <char>", "request  alias")
+    .option("-m,--module <char>", "axios module alias")
+````
+
 ## use
 
 直接将JCE作为axios的 httpRequestFunction 引入

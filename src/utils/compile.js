@@ -37,7 +37,7 @@ function compileToAxios(data) {
         }
         BODY += `
             export function ${element}(${args}){
-                return httpReqeust({
+                return httpRequest({
                     url:'${alias+"/"}${interFaceName}/${element}',
                     method:'${httpMethod}',
                     ${args}
