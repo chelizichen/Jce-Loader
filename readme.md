@@ -8,7 +8,7 @@ npm install jce-loader -g
 
 一个配置项，两个可选项
 
-jce2req at <JceFilePath> -a /api -m @/utils/request
+jce2req at \<JceFilePath> -a /api -m @/utils/request
 
 ````js
 program.version("1.0.0")
